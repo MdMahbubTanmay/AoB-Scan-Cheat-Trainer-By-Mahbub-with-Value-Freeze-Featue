@@ -85,7 +85,7 @@ namespace MyCheat
 
             foreach (var address in Antenna_address) //use ur address variable.Here I used  Antenna_address
             {
-                bool success = mem.WriteMemory("0x" + address.ToString("X"), "float", "9999999"); // You can change type/value here
+                bool success = mem.WriteMemory("0x" + address.ToString("X"), "float", "9999999"); // You can change type/value here. we can also write like  "bytes", "D8 70 D8 BF"
                 if (!success)
                     MessageBox.Show($"Failed to write to address 0x{address:X}");
             }
